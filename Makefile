@@ -15,14 +15,14 @@ test smoke:
 	curl --fail http://127.0.0.1:5000
 
 docker_build:
-	docker build -t $(MY_DOCKER_NAME) .
+	docker build -t hello-world-printer .
 
 docker_run: docker_build
 	docker run \
-	--name $(MY_DOCKER_NAME)-dev \
+	--name hello-world-printer-dev \
 	-p 5000:5000 \
 	-d \
-	$(MY_DOCKER_NAME)
+	
 
 USERNAME=skgogolewska
 TAG=$(USERNAME)/hello-world-printer
