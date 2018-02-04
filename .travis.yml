@@ -10,3 +10,8 @@ script:
   - make lint
   - make docker_build
   - make docker_push
+deploy:
+  provider: heroku
+  app:glacial-spire-89400
+  api_key: ${HEROKU_API_KEY}
+  
