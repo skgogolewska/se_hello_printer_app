@@ -1,6 +1,6 @@
 language: python
 services:
-  docker
+  - docker
 python:
   - "2.7"
 install:
@@ -12,6 +12,5 @@ script:
   - make docker_push
 deploy:
   provider: heroku
-  app:glacial-spire-89400
+  app: glacial-spire-89400
   api_key: ${HEROKU_API_KEY}
-  
